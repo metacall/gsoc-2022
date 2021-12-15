@@ -41,10 +41,15 @@ You can also ask for a review anytime to the community or mentor candidates befo
 
 ### Cross-Platform Builds
 
-Skills: C/C++, Guix, DevOps
+Skills: C/C++, Bash, Batch, Guix, DevOps
 
 Description:
-MetaCall has multiple runtimes embedded on it and one of its objectives is to be as cross platform as possible. Each runtime has its own dependencies which create a huge dependency tree sometimes. This is a big complexity that is difficult to handle. Our first approach was to Dockerize all dependencies, building them manually, taking care of `LDFLAGS` in order to make the distributable portable at the same time. After this, we tried Guix to implement our build system and we achieved to compile MetaCall completely and make it completely self-contained (in Linux for amd64). This allows MetaCall to be installed even in a BusyBox and work properly without any other system dependency. We have started to support cross-platform builds with Guix but the development has stalled. The objective of this task is to achieve cross-platform builds for Linux, Windows and MacOs, and multiple hardware architectures. Guix supports cross-compiling but it is sometimes restricted due to its nature. One option we propose is to override the `gnu-build-system` of Guix by using Zig compiler and allow Cross-Compiling by means of its frontend. But, there are many other options to do it and we are open to them. Maybe if it can be achieved with a different package manager we are open to it too.
+MetaCall has multiple runtimes embedded on it and one of its objectives is to be as cross platform as possible. Each runtime has its own dependencies which create a huge dependency tree sometimes. This is a big complexity that is difficult to handle. Currently we are using Guix as our build system in Linux and we achieved to compile MetaCall and make it completely self-contained (in Linux for amd64 at the moment of writting). This allows MetaCall to be installed even in a BusyBox and work properly without any other system dependency.
+
+TODO: Describe Windows and Mac, Links
+
+
+We have started to support cross-platform builds with Guix but the development has stalled. The objective of this task is to achieve cross-platform builds for Linux, Windows and MacOs, and multiple hardware architectures. Guix supports cross-compiling but it is sometimes restricted due to its nature. One option we propose is to override the `gnu-build-system` of Guix by using Zig compiler and allow Cross-Compiling by means of its frontend. But, there are many other options to do it and we are open to them. Maybe if it can be achieved with a different package manager we are open to it too.
 
 Resources:
  - Initial Docker Cross-Platform Build Approach: https://github.com/metacall/distributable/tree/feature/build-scratch/linux
@@ -53,6 +58,29 @@ Resources:
  - Guix Build Options Documentation: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
  - Cross-compiling with Zig: https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html
 
+### Builder
+
+Skills: Go, Docker, BuildKit
+
+TODO
+
+### Deploy CLI
+
+Skills: TypeScript
+
+TODO
+
+### FaaS Reimplementation
+
+Skills: TypeScript
+
+TODO
+
+### MetaCall CLI Bootstrapping / Refactor
+
+Skills: C/C++, Python or NodeJS
+
+TODO
 
 ## Find Us
 
