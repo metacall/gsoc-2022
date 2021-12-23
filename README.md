@@ -23,7 +23,7 @@ If your idea is not listed, please discuss it with the mentors in the available 
 #### 2. Understand that
 
 - You're committing to a project and we may ask you to publicly publish your weekly progress on it.
-- It's the first year Metacall is joining the GSoC program and we will ask you to give feedback on our mentorship and management continuously.
+- It's the second year Metacall is joining the GSoC program and we will ask you to give feedback on our mentorship and management continuously.
 - You wholeheartedly agree with the [code of conduct](https://github.com/metacall/core/blob/develop/.github/CODE_OF_CONDUCT.md).
 - You must tell us if there's any proposed idea that you don't think would fit the timeline or could be boring (yes, we're asking for feedback).
   
@@ -31,13 +31,14 @@ If your idea is not listed, please discuss it with the mentors in the available 
 
 We recommend you to follow [Google's guide to Writing a Proposal](https://google.github.io/gsocguides/student/writing-a-proposal) as we won't be too harsh on the format and we won't give any template. But hey, we're giving you a starting point!
 
-You can send the proposal link to any readable format you wish: Google Docs, plain text, in markdown... and preferably hosted online, accessible with a common browser **without downloading anything locally**.
+You can send the proposal link to any readable format you wish: Google Docs, plain text, in markdown... and preferably hosted online, accessible with a common browser **without downloading anything**.
 
 You can also ask for a review anytime to the community or mentor candidates before the student application deadline. It's much easier if you get feedback early than to wait for the last moment.
   
 
 ## Project Ideas
 
+You can also propose your own.
 
 ### Cross-Platform Builds
 
@@ -87,6 +88,14 @@ TODO
 TODO
 
 ### Run MetaCall in Browser
+
+TODO
+
+### Polyglot debugger
+
+TODO
+
+### Polyglot IDE
 
 TODO
 
