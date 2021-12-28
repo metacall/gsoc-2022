@@ -68,7 +68,7 @@ Finally it would be interesting to add a README in [this repository](https://git
 
 **Skills**: Go, Docker, BuildKit, Sandboxing, Kubernetes
 
-**Size**: Medium Sized Project
+**Size**: Large Project
 
 **Description**:
 Currently MetaCall is offered as Docker image on [Docker Hub](https://hub.docker.com/r/metacall/core). It includes 4 tags (`deps`, `dev`, `runtime` and `cli`) with only one architecture (`amd64`). Right now all the languages are packaged at once into the image, producing a big sized image, specially on the `dev` tag. The idea of this project is to implement a CLI with a separated API which provides a way to generate compact Docker images with MetaCall runtime. Docker does not allow to selectively choose from multiple layers merging them into one with efficient caching, we could do this by means of templating the Dockerfile itself but using the Buildkit API will make the solution much more robust and with the benefit of all the features from Buildkit like caching.
