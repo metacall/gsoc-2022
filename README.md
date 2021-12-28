@@ -45,19 +45,21 @@ You can also propose your own.
 Skills: C/C++, Bash, Batch, Guix, DevOps
 
 Description:
-MetaCall has multiple runtimes embedded on it and one of its objectives is to be as cross platform as possible. Each runtime has its own dependencies which create a huge dependency tree sometimes. This is a big complexity that is difficult to handle. Currently we are using Guix as our build system in Linux and we achieved to compile MetaCall and make it completely self-contained (in Linux for amd64 at the moment of writting). This allows MetaCall to be installed even in a BusyBox and work properly without any other system dependency.
+MetaCall has multiple runtimes embedded on it and one of its objectives is to be as cross platform as possible. Each runtime has its own dependencies which create a huge dependency tree sometimes. This is a big complexity that is difficult to handle. Currently we are using Guix as our build system in Linux and we achieved to compile MetaCall and make it completely self-contained (in Linux for amd64 at the moment of writting). This allows MetaCall to be installed even in a BusyBox and work properly without any other system dependency. Current implementation of the build system consist of 3 repositories:
 
-TODO: Describe Windows and Mac, Links
+ - Distributable Linux: https://github.com/metacall/distributable-linux
+ - Distributable Windows: https://github.com/metacall/distributable-windows
+ - Distributable MacOs: https://github.com/metacall/distributable-macos
 
-
-We have started to support cross-platform builds with Guix but the development has stalled. The objective of this task is to achieve cross-platform builds for Linux, Windows and MacOs, and multiple hardware architectures. Guix supports cross-compiling but it is sometimes restricted due to its nature. One option we propose is to override the `gnu-build-system` of Guix by using Zig compiler and allow Cross-Compiling by means of its frontend. But, there are many other options to do it and we are open to them. Maybe if it can be achieved with a different package manager we are open to it too.
+The objective of this idea is to improve the cross-platform support for the main supported platforms:
+ - Implementing the build script for MacOs from scratch with automated CI, in a similar way to how Windows distributable has been done. Add tests and improve the install script for Linux [by adding support to MacOs](https://github.com/metacall/install/blob/master/install.sh#L213).
+ - Improving the language support[[1]](https://github.com/metacall/distributable-windows/issues/14)[[2]](https://github.com/metacall/distributable-windows/issues/13) for Windows with their [respective tests](https://github.com/metacall/distributable-windows/blob/master/test.bat) and [improving the install script](https://github.com/metacall/install/blob/282d193329c6c9bbfca86b5ce4c7db8679f67c88/install.ps1#L158) for Windows.
+ - Adding [new architectures](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.70/html_node/Specifying-Target-Triplets.html#Specifying-Target-Triplets) to Linux with their respective tests (for this it is possible to use Docker multi-architecture for supporting those tests).
 
 Resources:
- - Initial Docker Cross-Platform Build Approach: https://github.com/metacall/distributable/tree/feature/build-scratch/linux
- - First steps in Cross-Platform Build for Guix: https://github.com/metacall/distributable/tree/feature/build-guix-cross
- - Base implementation of Cross-Platform support in `metacall/distributable`: https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/Makefile#L31 and https://github.com/metacall/distributable/blob/f14cbdcfe3bcb85e0331172e0dbb512e2f21350a/scripts/build.sh#L23
- - Guix Build Options Documentation: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
- - Cross-compiling with Zig: https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html
+ - Guix Build System options: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
+ - Docker Multi-Arch support: https://docs.docker.com/desktop/multi-arch/
+
 
 ### Builder
 
