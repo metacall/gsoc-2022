@@ -122,7 +122,19 @@ For better deployment, the MetaCall FaaS should be integrable with MetaCall CLI,
 
 ### MetaCall CLI Bootstrapping / Refactor
 
-Skills: C/C++, Python or NodeJS
+**Skills**: C/C++, Python or NodeJS
+
+**Size**: Medium Project
+
+**Description**:
+Recently MetaCall has provided support for C language. This means that now we can allow MetaCall to compile itself, or provide core functionality by just using plugins. Thanks to this unlocked feature, we can rewrite the CLI in C and other languages, simplifiying the whole design and making it much more simplified, abstracted and with the possibility of very simple extension in multiple languages. The main objective of this project is to separate the current commands (`load`, `inspect`, `call`...) into separated single function files, where each function/file is mapped to one command. It is also important to provide a good CLI and REPL interface. Right now MetaCall CLI has support for two modes, the CLI and REPL mode. The CLI works as follows:
+  - `metacall index.js`
+  - `metacall asd.py --some-extra-flag`
+  - `metacall pip install flask`
+
+It can run multiple scripts and it can use package managers from the command line. We should unify this interface into a way that can be pluggeable but also consistent, so it can be standardized. For example, in the future we want to add support for [`libseccmp` capabilities](https://github.com/metacall/gsoc-2021#cli-security-through-seccomp-sandboxing), and this should be able to be indicated from the flags in the CLI, and it should be implemented as a plugin too.
+
+The REPL mode is sightly different, it has a list of commands that can be executed and listed when asking for help. Those commands include loading a file, calling to a function, inspecting loaded functions. This REPL must be able to be extended, either adding extra commands or launching sub-REPLs or CLIs that are already implemented in separated repositories. The objective of this is to provide a unified tool that can be easily extended with existing projects easily. An example of those is the [Polyglot REPL](https://github.com/metacall/polyglot-repl) and the [Deploy CLI](https://github.com/metacall/deploy).
 
 TODO
 
