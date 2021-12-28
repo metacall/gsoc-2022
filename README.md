@@ -136,6 +136,14 @@ It can run multiple scripts and it can use package managers from the command lin
 
 The REPL mode is sightly different, it has a list of commands that can be executed and listed when asking for help. Those commands include loading a file, calling to a function, inspecting loaded functions. This REPL must be able to be extended, either adding extra commands or launching sub-REPLs or CLIs that are already implemented in separated repositories. The objective of this is to provide a unified tool that can be easily extended with existing projects easily. An example of those is the [Polyglot REPL](https://github.com/metacall/polyglot-repl) and the [Deploy CLI](https://github.com/metacall/deploy).
 
+All the parsing of the CLI commands and the REPL commands can be mostly fully reimplemented in another language like Python or NodeJS (preferably Python because packages are easier to deploy in Guix, otherwise the NPM package must be provided in a self-contained compiled form). So most of the hard work can be done in a high level language and the CLI can be completely bootstrapped from scratch.
+
+For trying out how the CLI or REPL works right now, you can download it here: https://github.com/metacall/install
+
+The student must send a proper design in order to be accepted before starting the refactor, it can be discussed with the Staff on the [different chats we are available](https://github.com/metacall/gsoc-2022/blob/main/README.md#find-us).
+
+**Resources**:
+
 TODO
 
 ### Runtime Manager
