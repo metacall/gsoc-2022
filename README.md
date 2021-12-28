@@ -84,15 +84,41 @@ This project has to be efficient and sandboxed, focused on FaaS development and 
 
 ### Deploy CLI
 
-Skills: TypeScript
+**Skills**: TypeScript
 
-TODO
+**Size**: Large Project
 
-### FaaS Reimplementation
+**Description**:
+This project will implement a CLI for deploying projects into MetaCall FaaS. This CLI should be able to be integrated with the MetaCall CLI. The objective of this project is to provide an interactive and also automated way to deploy projects into MetaCall FaaS. It has already some of the functionalities provided, and some tests implemented. The CLI should be tested through automated testing and all the requirements listed in the [TODO](https://github.com/metacall/deploy/blob/master/TODO.md) must be achieved.
 
-Skills: TypeScript
+For better deployment, the Deploy CLI should be integrable with MetaCall CLI, providing a self contained distributable with all the compiled code which can be launched or invoked from an external CLI.
 
-TODO
+**Resources**:
+ - MetaCall Deploy repository: https://github.com/metacall/deploy
+ - MetaCall FaaS: https://dashboard.metacall.io
+ - Video Deploying a hundred functions into MetaCall FaaS using the Dashobard: https://www.youtube.com/watch?v=2RAqTmQAWEc
+ - MetaCall Protocol: https://github.com/metacall/protocol
+ - MetaCall FaaS TypeScript reimplementation: https://github.com/metacall/faas
+
+### FaaS TypeScript Reimplementation
+
+**Skills**: TypeScript
+
+**Size**: Large Project
+
+**Description**:
+This project offers a reimplementation of [MetaCall FaaS](https://dashboard.metacall.io) but with a simpler and less performant implementation. The objective of this FaaS reimplementation is to provide a simple and portable FaaS that can be run from the CLI in order to locally test the functions and complete projects that can be deployed into MetaCall FaaS. This is a very important part of the project because it is needed in order to fullfill the developer workflow when developing distributed polyglot applications.
+
+It should mimick the [MetaCall FaaS REST API](https://github.com/metacall/deploy/blob/master/src/test/integration.protocol.spec.ts) but without need of authentication and with only the required capabilities for development. This repository will share parts with MetaCall FaaS through [MetaCall Protocol](https://github.com/metacall/protocol) so code can be reused between the repositories.
+
+For better deployment, the MetaCall FaaS should be integrable with MetaCall CLI, providing a self contained distributable with all the compiled code which can be launched or invoked from an external CLI via API.
+
+**Resources**:
+ - MetaCall FaaS TypeScript reimplementation repository: https://github.com/metacall/faas
+ - MetaCall FaaS: https://dashboard.metacall.io
+ - Video Deploying a hundred functions into MetaCall FaaS using the Dashobard: https://www.youtube.com/watch?v=2RAqTmQAWEc
+ - MetaCall Protocol: https://github.com/metacall/protocol
+ - MetaCall Deploy: https://github.com/metacall/deploy
 
 ### MetaCall CLI Bootstrapping / Refactor
 
