@@ -42,9 +42,11 @@ You can also propose your own.
 
 ### Cross-Platform Builds
 
-Skills: C/C++, Bash, Batch, Guix, DevOps
+**Skills**: C/C++, Bash, Batch, Guix, DevOps
 
-Description:
+**Size**: Medium Sized Project
+
+**Description**:
 MetaCall has multiple runtimes embedded on it and one of its objectives is to be as cross platform as possible. Each runtime has its own dependencies which create a huge dependency tree sometimes. This is a big complexity that is difficult to handle. Currently we are using Guix as our build system in Linux and we achieved to compile MetaCall and make it completely self-contained (in Linux for amd64 at the moment of writting). This allows MetaCall to be installed even in a BusyBox and work properly without any other system dependency. Current implementation of the build system consist of 3 repositories:
 
  - Distributable Linux: https://github.com/metacall/distributable-linux
@@ -54,18 +56,31 @@ MetaCall has multiple runtimes embedded on it and one of its objectives is to be
 The objective of this idea is to improve the cross-platform support for the main supported platforms:
  - Implementing the build script for MacOs from scratch with automated CI, in a similar way to how Windows distributable has been done. Add tests and improve the install script for Linux [by adding support to MacOs](https://github.com/metacall/install/blob/master/install.sh#L213).
  - Improving the language support[[1]](https://github.com/metacall/distributable-windows/issues/14)[[2]](https://github.com/metacall/distributable-windows/issues/13) for Windows with their [respective tests](https://github.com/metacall/distributable-windows/blob/master/test.bat) and [improving the install script](https://github.com/metacall/install/blob/282d193329c6c9bbfca86b5ce4c7db8679f67c88/install.ps1#L158) for Windows.
- - Adding [new architectures](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.70/html_node/Specifying-Target-Triplets.html#Specifying-Target-Triplets) to Linux with their respective tests (for this it is possible to use Docker multi-architecture for supporting those tests).
+ - Adding [new architectures](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.70/html_node/Specifying-Target-Triplets.html#Specifying-Target-Triplets) to Linux with their respective tests (for this it is possible to use Docker multi-architecture for supporting those tests) and the install script support for those architectures.
 
-Resources:
+Finally it would be interesting to add a README in [this repository](https://github.com/metacall/distributable) in order to document the three repositories and build systems.
+
+**Resources**:
  - Guix Build System options: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
  - Docker Multi-Arch support: https://docs.docker.com/desktop/multi-arch/
 
-
 ### Builder
 
-Skills: Go, Docker, BuildKit
+**Skills**: Go, Docker, BuildKit, Sandboxing, Kubernetes
 
-TODO
+**Size**: Medium Sized Project
+
+**Description**:
+Currently MetaCall is offered as Docker image on [Docker Hub](https://hub.docker.com/r/metacall/core). It includes 4 tags (`deps`, `dev`, `runtime` and `cli`) with only one architecture (`amd64`). Right now all the languages are packaged at once into the image, producing a big sized image, specially on the `dev` tag. The idea of this project is to implement a CLI with a separated API which provides a way to generate compact Docker images with MetaCall runtime. Docker does not allow to selectively choose from multiple layers merging them into one with efficient caching, we could do this by means of templating the Dockerfile itself but using the Buildkit API will make the solution much more robust and with the benefit of all the features from Buildkit like caching.
+
+Another main requirement for this project is that it must be run under rootless and daemonless, inside a Dockerized environment (i.e this must be able to be run inside Docker without permissions and without a Docker daemon, so it can be run in a Kubernetes cluster, pushing and pulling the resulting images from a private registry).
+
+This project has to be efficient and sandboxed, focused on FaaS development and producing compact images in terms of size and dependencies, so the bandwidth and attack surface is reduced.
+
+**Resources**:
+ - MetaCall Builder repository: https://github.com/metacall/builder
+ - MetaCall Core Docker build system: https://github.com/metacall/core/blob/develop/docker-compose.sh | https://github.com/metacall/core/blob/develop/docker-compose.yml | https://github.com/metacall/core/tree/develop/tools
+ - Buildkit examples: https://github.com/moby/buildkit/tree/master/examples
 
 ### Deploy CLI
 
