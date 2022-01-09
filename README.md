@@ -116,7 +116,7 @@ For better deployment, the MetaCall FaaS should be integrable with MetaCall CLI,
 **Resources**:
  - MetaCall FaaS TypeScript reimplementation repository: https://github.com/metacall/faas
  - MetaCall FaaS: https://dashboard.metacall.io
- - Video Deploying a hundred functions into MetaCall FaaS using the Dashobard: https://www.youtube.com/watch?v=2RAqTmQAWEc
+ - Video Deploying a hundred functions into MetaCall FaaS using the Dashboard: https://www.youtube.com/watch?v=2RAqTmQAWEc
  - MetaCall Protocol: https://github.com/metacall/protocol
  - MetaCall Deploy: https://github.com/metacall/deploy
 
