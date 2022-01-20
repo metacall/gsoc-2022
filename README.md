@@ -3,7 +3,7 @@ List of project ideas for students applying to the Google Summer of Code program
 
 ## Timeline/milestones
 
-The program has not been announced yet but [it is coming with major changes](https://opensource.googleblog.com/2021/11/expanding-google-summer-of-code-in-2022.html).
+The program has been announced and [it is coming with major changes](https://opensource.googleblog.com/2021/11/expanding-google-summer-of-code-in-2022.html).
 
 Please always refer to the [official timeline](https://developers.google.com/open-source/gsoc/timeline). 
   
@@ -159,6 +159,10 @@ TODO
 TODO
 
 ### Polyglot IDE
+
+TODO
+
+### Centralize/migrate existing Continuous Integration pipelines to GitHub
 
 TODO
 
