@@ -146,7 +146,7 @@ The student must send a proper design in order to be accepted before starting th
 
 TODO
 
-### Runtime Manager
+### Rust actix + inline tsx
 
 TODO
 
