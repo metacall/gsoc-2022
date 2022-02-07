@@ -168,11 +168,14 @@ TODO
 
 ## Find Us
 
+The three chats are bridged by Matrix (messages sent from one can be seen from all).
+
+
 Telegram:
 <a href="https://t.me/joinchat/BMSVbBatp0Vi4s5l4VgUgg" alt="Telegram"><img src="https://img.shields.io/static/v1?label=metacall&message=join&color=blue&logo=telegram&style=flat" /></a>
 
 Discord: 
   <a href="https://discord.gg/upwP4mwJWa" alt="Discord"><img src="https://img.shields.io/discord/781987805974757426?label=discord&style=flat" /></a>
 
-Matrix (bridged with Telegram):
+Matrix:
   <a href="https://matrix.to/#/#metacall:matrix.org" alt="Matrix"><img src="https://img.shields.io/matrix/metacall:matrix.org?label=matrix&style=flat" /></a>
