@@ -162,9 +162,22 @@ TODO
 
 TODO
 
-### Centralize/migrate existing Continuous Integration pipelines to GitHub
+### Migrate existing CI/CD pipelines to GitHub
 
-TODO
+**Skills**: GitHub Actions, YAML, BASH, CMake 
+**Size**: Medium project
+**Description**:
+
+Currently, the Continuous Integration and Continuous Deployment pipelines are hosted on GitLab and uses their in-built GitLab CI. We use particular scripts to manage our automated testing and deployment through GitLab CI. The objective of this project is to migrate our CI/CD pipelines and deployment to GitHub Actions and GitHub Container Registry. GitHub Actions is free for public projects and does not limit our CI/CD minutes per month, hence providing a credible way of testing and deploying. Through GitHub Container Registry, we would like to centralize all our Docker images under our GitHub organization, while escaping the rate limiting issues around Docker Hub.
+
+The project would involve writing workflows using GitHub Actions to automate this process and allow the project to be built on every push and pull request event. We would also like to implement remote caching for faster builds, CI/CD matrix for testing on various architectures, and improving the developer experience for contributors. Finally it would be interesting to document the whole CI/CD strategy and workflow, for rest of the community to adopt this work as a best practise.
+
+Resources:
+
+- GitHub Actions: https://github.com/features/actions
+- GitHub Container Registry: https://ghcr.io/
+- Ccache: https://ccache.dev/
+- MetaCall on GitLab: https://gitlab.com/metacall/core
 
 ## Find Us
 
