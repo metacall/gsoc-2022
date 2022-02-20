@@ -224,6 +224,17 @@ The final result of this project should be to be able to debug a polyglot applic
 
 ### Polyglot IDE
 
+**Skills**: VSCode (JavaScript)
+
+**Size**: Large Project
+
+**Description**:
+The objective of this project is complementary to the [previous one](https://github.com/metacall/gsoc-2022/blob/main/README.md#polyglot-debugger). It requires to implement a VSCode extension which allows to have an integrated environment for polyglot development.
+
+TODO
+
+**Resources**:
+
 TODO
 
 ### Migrate existing CI/CD pipelines to GitHub
