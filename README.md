@@ -153,7 +153,20 @@ The student must send a proper design in order to be accepted before starting th
 
 ### Rust Actix + Inline TypeScript React Server Side Rendering (tsx)
 
-TODO
+**Skills**: Rust, TypeScript, React
+
+**Size**: Medium Project
+
+**Description**:
+Recently MetaCall has provided support for [inlining other languages into Rust](https://github.com/metacall/core/blob/adcc50496d53797011b87f42131cb857d0009ffb/source/ports/rs_port/tests/inline_test.rs#L13) though its macro system. This allows adding languages like Python or TypeScript into Rust easily. The main idea of this project is to create a Proof of Concept of an Actix server that easily embeds Server Side Rendering with TypeScript. This should be like a small framework which uses MetaCall and allows writing endpoint handlers where you can embed TypeScript directly with simplicity. In order to achieve this, the Rust Port will need to be extended, adding extra functionality required.
+
+The Proof of Concept can contain also benchmarks, in order to compare it to other server side rendering solutions or in order to be the baseline for future optimizations in MetaCall TypeScript support. Adding documentation and examples is needed too, so it can be reused in the future by other users and the functionality and utility of the framework is shown.
+
+**Resources**:
+
+ - MetaCall Rust Port Crate: https://docs.rs/metacall/latest/metacall/
+ - MetaCall Rust Port Source: https://github.com/metacall/core/tree/develop/source/ports/rs_port
+ - MetaCall FaaS SSR Example: https://github.com/metacall/basic-react-SSR-example
 
 ### Run MetaCall in Browser
 
@@ -169,15 +182,17 @@ TODO
 
 ### Migrate existing CI/CD pipelines to GitHub
 
-**Skills**: GitHub Actions, YAML, BASH, CMake 
-**Size**: Medium project
+**Skills**: GitHub Actions, YAML, BASH, CMake
+
+**Size**: Medium Project
+
 **Description**:
 
 Currently, the Continuous Integration and Continuous Deployment pipelines are hosted on GitLab and uses their in-built GitLab CI. We use particular scripts to manage our automated testing and deployment through GitLab CI. The objective of this project is to migrate our CI/CD pipelines and deployment to GitHub Actions and GitHub Container Registry. GitHub Actions is free for public projects and does not limit our CI/CD minutes per month, hence providing a credible way of testing and deploying. Through GitHub Container Registry, we would like to centralize all our Docker images under our GitHub organization, while escaping the rate limiting issues around Docker Hub.
 
 The project would involve writing workflows using GitHub Actions to automate this process and allow the project to be built on every push and pull request event. We would also like to implement remote caching for faster builds, CI/CD matrix for testing on various architectures, and improving the developer experience for contributors. Finally it would be interesting to document the whole CI/CD strategy and workflow, for rest of the community to adopt this work as a best practise.
 
-Resources:
+**Resources**:
 
 - GitHub Actions: https://github.com/features/actions
 - GitHub Container Registry: https://ghcr.io/
