@@ -235,7 +235,8 @@ TODO
 
 **Resources**:
 
-TODO
+ - GraalVM Polyglot Live Extension: https://marketplace.visualstudio.com/items?itemName=hpi-swa.polyglot-live-programming
+ - VSCode Managing Polyglot Environments: https://dev.to/gokayokyay/managing-vscode-profiles-for-the-polyglot-developers-5d1j
 
 ### Migrate existing CI/CD pipelines to GitHub
 
