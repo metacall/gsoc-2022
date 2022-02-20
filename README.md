@@ -124,7 +124,7 @@ For better deployment, the MetaCall FaaS should be integrable with MetaCall CLI,
 
 **Skills**: C/C++, Python or NodeJS
 
-**Size**: Medium Project
+**Size**: Medium Sized Project
 
 **Description**:
 Recently MetaCall has provided support for C language. This means that now we can allow MetaCall to compile itself, or provide core functionality by just using plugins. Thanks to this unlocked feature, we can rewrite the CLI in C and other languages, simplifiying the whole design and making it much more simplified, abstracted and with the possibility of very simple extension in multiple languages. The main objective of this project is to separate the current commands (`load`, `inspect`, `call`...) into separated single function files, where each function/file is mapped to one command. It is also important to provide a good CLI and REPL interface. Right now MetaCall CLI has support for two modes, the CLI and REPL mode. The CLI works as follows:
@@ -155,7 +155,7 @@ The student must send a proper design in order to be accepted before starting th
 
 **Skills**: Rust, TypeScript, React
 
-**Size**: Medium Project
+**Size**: Medium Sized Project
 
 **Description**:
 Recently MetaCall has provided support for [inlining other languages into Rust](https://github.com/metacall/core/blob/adcc50496d53797011b87f42131cb857d0009ffb/source/ports/rs_port/tests/inline_test.rs#L13) though its macro system. This allows adding languages like Python or TypeScript into Rust easily. The main idea of this project is to create a Proof of Concept of an Actix server that easily embeds Server Side Rendering with TypeScript. This should be like a small framework which uses MetaCall and allows writing endpoint handlers where you can embed TypeScript directly with simplicity. In order to achieve this, the Rust Port will need to be extended, adding extra functionality required.
@@ -170,7 +170,21 @@ The Proof of Concept can contain also benchmarks, in order to compare it to othe
 
 ### Run MetaCall in Browser
 
-TODO
+**Skills**: WebAssembly, CMake, C/C++
+
+**Size**: Medium Sized Project
+
+**Description**:
+Nowadays WebAssembly is gaining a lot of traction, allowing more functionality each time and supporting as a compilation target in a wide variety of languages. One of the first attempts to be able to virtualize a Linux into the browser was JSLinux from Fabrice Bellard. This solution was implemented originally using `asm.js` and existing technology before the standardization of WebAssembly. The project has been refactored through the time but there are other alternatives nowadays which can be more powerful and production ready.
+
+The objective of this idea is to create a Proof of Concept.. (TODO)
+
+We should be able to create a very minimal ISO image that can be virtualized inside a browser which can execute MetaCall. The objective of Proof of Concept is to allow to create a base image to run polyglot applications easily in the browser.
+
+**Resources**:
+
+ - JSLinux from Fabrice Bellard: https://bellard.org/jslinux/
+
 
 ### Polyglot Debugger
 
