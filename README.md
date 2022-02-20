@@ -144,9 +144,14 @@ The student must send a proper design in order to be accepted before starting th
 
 **Resources**:
 
-TODO
+ - MetaCall CLI Issue: https://github.com/metacall/core/issues/84
+ - NodeJS REPL: https://nodejs.org/api/repl.html
+ - NodeJS Readline: https://nodejs.org/api/readline.html
+ - Python Prompt Toolkit: https://github.com/prompt-toolkit/python-prompt-toolkit
+ - MetaCall CLI Source: https://github.com/metacall/core/tree/develop/source/cli/metacallcli
+ - MetaCall CLI Idea GSoC 2021: https://github.com/metacall/gsoc-2021#cli-plugin-support
 
-### Rust actix + inline tsx
+### Rust Actix + Inline TypeScript React Server Side Rendering (tsx)
 
 TODO
 
@@ -154,7 +159,7 @@ TODO
 
 TODO
 
-### Polyglot debugger
+### Polyglot Debugger
 
 TODO
 
