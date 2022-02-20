@@ -175,16 +175,16 @@ The Proof of Concept can contain also benchmarks, in order to compare it to othe
 **Size**: Medium Sized Project
 
 **Description**:
-Nowadays WebAssembly is gaining a lot of traction, allowing more functionality each time and supporting as a compilation target in a wide variety of languages. One of the first attempts to be able to virtualize a Linux into the browser was JSLinux from Fabrice Bellard. This solution was implemented originally using `asm.js` and existing technology before the standardization of WebAssembly. The project has been refactored through the time but there are other alternatives nowadays which can be more powerful and production ready.
+Nowadays WebAssembly is gaining a lot of traction, allowing more functionality each time and supporting as a compilation target in a wide variety of languages. One of the first attempts to be able to virtualize a Linux into the browser was JSLinux from Fabrice Bellard. This solution was implemented originally using `asm.js` and existing technology before the standardization of WebAssembly. The project has been refactored through the time but there are other alternatives nowadays which can be more powerful and production ready. A newer alternative to JSLinux is CheerpX, a modern compiler forked from LLVM for C/C++ to WebAssembly.
 
-The objective of this idea is to create a Proof of Concept.. (TODO)
-
-We should be able to create a very minimal ISO image that can be virtualized inside a browser which can execute MetaCall. The objective of Proof of Concept is to allow to create a base image to run polyglot applications easily in the browser.
+The objective of this idea is to create a Proof of Concept in order to run MetaCall in browser, other technologies different from the previously mentioned can be also considered, there is no restrictions. We should be able to create a very minimal ISO image that can be virtualized inside a browser which can execute MetaCall or at least a way to execute MetaCall in browser with few languages, so we can demonstrate the interoperability. The project should allow to create a base to run polyglot applications easily in the browser.
 
 **Resources**:
 
  - JSLinux from Fabrice Bellard: https://bellard.org/jslinux/
-
+ - CheerpX Compiler: https://github.com/leaningtech/cheerp-compiler
+ - CheerpX WebVM Article: https://leaningtech.com/webvm-server-less-x86-virtual-machines-in-the-browser/
+ - CheerpX WebVM Demo: https://webvm.io
 
 ### Polyglot Debugger
 
