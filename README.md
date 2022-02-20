@@ -168,6 +168,26 @@ The Proof of Concept can contain also benchmarks, in order to compare it to othe
  - MetaCall Rust Port Source: https://github.com/metacall/core/tree/develop/source/ports/rs_port
  - MetaCall FaaS SSR Example: https://github.com/metacall/basic-react-SSR-example
 
+### Rust Loader Support
+
+**Skills**: Rust, Rust Compiler API
+
+**Size**: Medium Sized Project
+
+**Description**:
+Recently MetaCall [has stared support for Rust](https://github.com/metacall/core/tree/develop/source/loaders/rs_loader), allowing to embed Rust code into other languages like NodeJS, Python, etc. The current state of the loader allows to load and compile Rust code, obtaining the list of functions and types. The work to be done is to implement FFI calls, some options have been investigated already, like [`abi_stable`](https://crates.io/crates/abi_stable) crate, although the API is quite complex, and it has limitations like async support (although [there are alternatives](https://crates.io/crates/async_ffi)). Another workaround in order to implement FFI is to use the Compiler API to automatically generate stubs on the fly for each function, as we use the same compiler version to build the code and to call it, may be there is no need to make the ABI stable.
+
+Once a call has been done, another parts can be implemented, like `metacall_load_from_memory` which is basically an eval, or `metacall_load_from_package` which should be able to load precompiled packages. We may rely on `rlib` format, specially the `dylib` format which is the dynamic library version of `rlib` with [all the metadata information](https://rustc-dev-guide.rust-lang.org/backend/libs-and-metadata.html) required for the introspection in the `.rustc` section.
+
+**Resources**:
+
+ - MetaCall Rust Loader Source: https://github.com/metacall/core/tree/develop/source/loaders/rs_loader
+ - Rust ABI Stable Source: https://github.com/rodrimati1992/abi_stable_crates
+ - Rust Async FFI Source: https://github.com/oxalica/async-ffi
+ - Rust FFI Guide: https://michael-f-bryan.github.io/rust-ffi-guide/overview.html
+ - Rust Compiler API: https://rustc-dev-guide.rust-lang.org/
+ - Rust Live Reload: https://fasterthanli.me/articles/so-you-want-to-live-reload-rust
+
 ### Run MetaCall in Browser
 
 **Skills**: WebAssembly, CMake, C/C++
