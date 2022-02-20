@@ -188,7 +188,19 @@ The objective of this idea is to create a Proof of Concept in order to run MetaC
 
 ### Polyglot Debugger
 
-TODO
+**Skills**: C/C++, Debuggers, VSCode (JavaScript)
+
+**Size**: Large Project
+
+**Description**:
+The objective of this project is to implement support in MetaCall for debugging, mainly in Visual Studio Code IDE, but it can be done with any other IDE that supports the debugging protocols from NodeJS, Python, etc. This project may imply to modify MetaCall Core in order to enable debugging, or it may be done in a completely new project that adds debugging capabilities to MetaCall CLI or Core. This project is highly experimental at the moment of writing, but there has been already some investigation respect to it. The easy part is to launch the runtime with debugging protocol enabled, for example: `node --inspect script.js`. But attaching to running processes is more complex. For the latter one there is a [requirement in MetaCall Core](https://github.com/metacall/core/issues/231) which makes it more difficult to implement.
+
+The final result of this project should be to be able to debug a polyglot application, adding breakpoints and jumping between languages inside Visual Studio Code (or any other similar IDE). It may require to implement a derived launch plugin for unifiying other launcher plugins.
+
+**Resources**:
+
+ - NodeJS Debugging: https://nodejs.org/en/docs/guides/debugging-getting-started/
+ - Python Debugging in VSCode: https://code.visualstudio.com/docs/python/debugging
 
 ### Polyglot IDE
 
@@ -198,7 +210,7 @@ TODO
 
 **Skills**: GitHub Actions, YAML, BASH, CMake
 
-**Size**: Medium Project
+**Size**: Medium Sized Project
 
 **Description**:
 
