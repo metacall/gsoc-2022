@@ -87,7 +87,7 @@ This project has to be efficient and sandboxed, focused on FaaS development and 
 
 **Expected outcomes**: A command line interface and library that is able to selectively compose docker images and run inside Docker/Kubernetes for MetaCall with efficient caching and compact size.
 
-**Possible mentors**:  Fernando Vaño Garcia, Vicente Eduardo Ferrer Garcia
+**Possible mentors**:  Fernando Vaño Garcia, Vicente Eduardo Ferrer Garcia, Gil Arasa Verge
 
 **Resources**:
  - MetaCall Builder repository: https://github.com/metacall/builder
@@ -170,7 +170,7 @@ The student must send a proper design in order to be accepted before starting th
 
 **Expected outcomes**: A refactor of MetaCall CLI with a bootstrappable design with all the current functionality (and improvements) provided as means of CLI plugins.
 
-**Possible mentors**:  Fernando Vaño Garcia, Vicente Eduardo Ferrer Garcia
+**Possible mentors**:  Fernando Vaño Garcia, Vicente Eduardo Ferrer Garcia, Gil Arasa Verge
 
 **Resources**:
 
@@ -217,7 +217,7 @@ Recently MetaCall [has stared support for Rust](https://github.com/metacall/core
 
 Once a call has been done, another parts can be implemented, like `metacall_load_from_memory` which is basically an eval, or `metacall_load_from_package` which should be able to load precompiled packages. We may rely on `rlib` format, specially the `dylib` format which is the dynamic library version of `rlib` with [all the metadata information](https://rustc-dev-guide.rust-lang.org/backend/libs-and-metadata.html) required for the introspection in the `.rustc` section.
 
-**Expected outcomes**: Complete Rust language support for MetaCall.
+**Expected outcomes**: Complete Rust language support for MetaCall (including FFI and introspection information through Rust Compiler API).
 
 **Possible mentors**: Vicente Eduardo Ferrer Garcia, Gil Arasa Verge, Fernando Vaño Garcia
 
@@ -256,20 +256,20 @@ The objective of this idea is to create a Proof of Concept in order to run MetaC
 
 ### Polyglot Debugger
 
-**Skills**: C/C++, Debuggers, VSCode (JavaScript)
+**Skills**: C/C++, Debuggers, VSCode (JavaScript/TypeScript)
 
 **Expected size of the project**: Large (350 hours)
 
 **Difficulty rating**: Hard
 
-**Possible mentors**: 
-
-**Expected outcomes**: 
-
 **Description**:
 The objective of this project is to implement support in MetaCall for debugging, mainly in Visual Studio Code IDE, but it can be done with any other IDE that supports the debugging protocols from NodeJS, Python, etc. This project may imply to modify MetaCall Core in order to enable debugging, or it may be done in a completely new project that adds debugging capabilities to MetaCall CLI or Core. This project is highly experimental at the moment of writing, but there has been already some investigation respect to it. The easy part is to launch the runtime with debugging protocol enabled, for example: `node --inspect script.js`. But attaching to running processes is more complex. For the latter one there is a [requirement in MetaCall Core](https://github.com/metacall/core/issues/231) which makes it more difficult to implement.
 
 The final result of this project should be to be able to debug a polyglot application, adding breakpoints and jumping between languages inside Visual Studio Code (or any other similar IDE). It may require to implement a derived launch plugin for unifiying other launcher plugins.
+
+**Expected outcomes**: A Visual Studio Code extension capable of debug a polyglot application with MetaCall.
+
+**Possible mentors**: Thomas Rory Gummerson, Vicente Eduardo Ferrer Garcia, Gil Arasa Verge
 
 **Resources**:
 
@@ -278,13 +278,13 @@ The final result of this project should be to be able to debug a polyglot applic
 
 ### Polyglot IDE
 
-**Skills**: VSCode (JavaScript)
+**Skills**: VSCode (JavaScript/TypeScript)
 
 **Expected size of the project**: Medium (175 hours)
 
 **Difficulty rating**: Medium
 
-**Possible mentors**: 
+**Possible mentors**:
 
 **Expected outcomes**: 
 
