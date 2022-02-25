@@ -238,14 +238,14 @@ Once a call has been done, another parts can be implemented, like `metacall_load
 
 **Difficulty rating**: Medium
 
-**Possible mentors**: 
-
-**Expected outcomes**: 
-
 **Description**:
 Nowadays WebAssembly is gaining a lot of traction, allowing more functionality each time and supporting as a compilation target in a wide variety of languages. One of the first attempts to be able to virtualize a Linux into the browser was JSLinux from Fabrice Bellard. This solution was implemented originally using `asm.js` and existing technology before the standardization of WebAssembly. The project has been refactored through the time but there are other alternatives nowadays which can be more powerful and production ready. A newer alternative to JSLinux is CheerpX, a modern compiler forked from LLVM for C/C++ to WebAssembly.
 
 The objective of this idea is to create a Proof of Concept in order to run MetaCall in browser, other technologies different from the previously mentioned can be also considered, there is no restrictions. We should be able to create a very minimal ISO image that can be virtualized inside a browser which can execute MetaCall or at least a way to execute MetaCall in browser with few languages, so we can demonstrate the interoperability. The project should allow to create a base to run polyglot applications easily in the browser.
+
+**Expected outcomes**: A working version of MetaCall running in browser (in WebAssembly), with the ability to interop between different languages.
+
+**Possible mentors**: Thomas Rory Gummerson, Vicente Eduardo Ferrer Garcia, Gil Arasa Verge, Jose Antonio Dominguez, Alexandre Gimenez Fernandez
 
 **Resources**:
 
@@ -269,7 +269,7 @@ The final result of this project should be to be able to debug a polyglot applic
 
 **Expected outcomes**: A Visual Studio Code extension capable of debug a polyglot application with MetaCall.
 
-**Possible mentors**: Thomas Rory Gummerson, Vicente Eduardo Ferrer Garcia, Gil Arasa Verge
+**Possible mentors**: Thomas Rory Gummerson, Vicente Eduardo Ferrer Garcia, Gil Arasa Verge, Jose Antonio Dominguez, Alexandre Gimenez Fernandez
 
 **Resources**:
 
