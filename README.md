@@ -44,7 +44,13 @@ You can also propose your own.
 
 **Skills**: C/C++, Bash, Batch, Guix, DevOps
 
-**Size**: Medium Sized Project
+**Expected size of the project**: 175 hour
+
+**Difficulty rating**: Medium
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 MetaCall has multiple runtimes embedded on it and one of its objectives is to be as cross platform as possible. Each runtime has its own dependencies which create a huge dependency tree sometimes. This is a big complexity that is difficult to handle. Currently we are using Guix as our build system in Linux and we achieved to compile MetaCall and make it completely self-contained (in Linux for amd64 at the moment of writting). This allows MetaCall to be installed even in a BusyBox and work properly without any other system dependency. Current implementation of the build system consist of 3 repositories:
@@ -68,7 +74,13 @@ Finally it would be interesting to add a README in [this repository](https://git
 
 **Skills**: Go, Docker, BuildKit, Sandboxing, Kubernetes
 
-**Size**: Large Project
+**Expected size of the project**: 350 hour
+
+**Difficulty rating**: Medium
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 Currently MetaCall is offered as Docker image on [Docker Hub](https://hub.docker.com/r/metacall/core). It includes 4 tags (`deps`, `dev`, `runtime` and `cli`) with only one architecture (`amd64`). Right now all the languages are packaged at once into the image, producing a big sized image, specially on the `dev` tag. The idea of this project is to implement a CLI with a separated API which provides a way to generate compact Docker images with MetaCall runtime. Docker does not allow to selectively choose from multiple layers merging them into one with efficient caching, we could do this by means of templating the Dockerfile itself but using the Buildkit API will make the solution much more robust and with the benefit of all the features from Buildkit like caching.
@@ -86,7 +98,13 @@ This project has to be efficient and sandboxed, focused on FaaS development and 
 
 **Skills**: TypeScript
 
-**Size**: Large Project
+**Expected size of the project**: 175 hour
+
+**Difficulty rating**: Easy
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 This project will implement a CLI for deploying projects into MetaCall FaaS. This CLI should be able to be integrated with the MetaCall CLI. The objective of this project is to provide an interactive and also automated way to deploy projects into MetaCall FaaS. It has already some of the functionalities provided, and some tests implemented. The CLI should be tested through automated testing and all the requirements listed in the [TODO](https://github.com/metacall/deploy/blob/master/TODO.md) must be achieved.
@@ -104,7 +122,13 @@ For better deployment, the Deploy CLI should be integrable with MetaCall CLI, pr
 
 **Skills**: TypeScript
 
-**Size**: Large Project
+**Expected size of the project**: 350 hour
+
+**Difficulty rating**: Medium
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 This project offers a reimplementation of [MetaCall FaaS](https://dashboard.metacall.io) but with a simpler and less performant implementation. The objective of this FaaS reimplementation is to provide a simple and portable FaaS that can be run from the CLI in order to locally test the functions and complete projects that can be deployed into MetaCall FaaS. This is a very important part of the project because it is needed in order to fullfill the developer workflow when developing distributed polyglot applications.
@@ -124,7 +148,13 @@ For better deployment, the MetaCall FaaS should be integrable with MetaCall CLI,
 
 **Skills**: C/C++, Python or NodeJS
 
-**Size**: Medium Sized Project
+**Expected size of the project**: 175 hour
+
+**Difficulty rating**: Medium
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 Recently MetaCall has provided support for C language. This means that now we can allow MetaCall to compile itself, or provide core functionality by just using plugins. Thanks to this unlocked feature, we can rewrite the CLI in C and other languages, simplifiying the whole design and making it much more simplified, abstracted and with the possibility of very simple extension in multiple languages. The main objective of this project is to separate the current commands (`load`, `inspect`, `call`...) into separated single function files, where each function/file is mapped to one command. It is also important to provide a good CLI and REPL interface. Right now MetaCall CLI has support for two modes, the CLI and REPL mode. The CLI works as follows:
@@ -155,7 +185,13 @@ The student must send a proper design in order to be accepted before starting th
 
 **Skills**: Rust, TypeScript, React
 
-**Size**: Medium Sized Project
+**Expected size of the project**: 175 hour
+
+**Difficulty rating**: Hard
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 Recently MetaCall has provided support for [inlining other languages into Rust](https://github.com/metacall/core/blob/adcc50496d53797011b87f42131cb857d0009ffb/source/ports/rs_port/tests/inline_test.rs#L13) though its macro system. This allows adding languages like Python or TypeScript into Rust easily. The main idea of this project is to create a Proof of Concept of an Actix server that easily embeds Server Side Rendering with TypeScript. This should be like a small framework which uses MetaCall and allows writing endpoint handlers where you can embed TypeScript directly with simplicity. In order to achieve this, the Rust Port will need to be extended, adding extra functionality required.
@@ -172,7 +208,13 @@ The Proof of Concept can contain also benchmarks, in order to compare it to othe
 
 **Skills**: Rust, Rust Compiler API
 
-**Size**: Medium Sized Project
+**Expected size of the project**: 350 hour
+
+**Difficulty rating**: Medium
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 Recently MetaCall [has stared support for Rust](https://github.com/metacall/core/tree/develop/source/loaders/rs_loader), allowing to embed Rust code into other languages like NodeJS, Python, etc. The current state of the loader allows to load and compile Rust code, obtaining the list of functions and types. The work to be done is to implement FFI calls, some options have been investigated already, like [`abi_stable`](https://crates.io/crates/abi_stable) crate, although the API is quite complex, and it has limitations like async support (although [there are alternatives](https://crates.io/crates/async_ffi)). Another workaround in order to implement FFI is to use the Compiler API to automatically generate stubs on the fly for each function, as we use the same compiler version to build the code and to call it, may be there is no need to make the ABI stable.
@@ -192,7 +234,13 @@ Once a call has been done, another parts can be implemented, like `metacall_load
 
 **Skills**: WebAssembly, CMake, C/C++
 
-**Size**: Medium Sized Project
+**Expected size of the project**: 350 hour
+
+**Difficulty rating**: Medium
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 Nowadays WebAssembly is gaining a lot of traction, allowing more functionality each time and supporting as a compilation target in a wide variety of languages. One of the first attempts to be able to virtualize a Linux into the browser was JSLinux from Fabrice Bellard. This solution was implemented originally using `asm.js` and existing technology before the standardization of WebAssembly. The project has been refactored through the time but there are other alternatives nowadays which can be more powerful and production ready. A newer alternative to JSLinux is CheerpX, a modern compiler forked from LLVM for C/C++ to WebAssembly.
@@ -210,7 +258,13 @@ The objective of this idea is to create a Proof of Concept in order to run MetaC
 
 **Skills**: C/C++, Debuggers, VSCode (JavaScript)
 
-**Size**: Large Project
+**Expected size of the project**: 350 hour
+
+**Difficulty rating**: Hard
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 The objective of this project is to implement support in MetaCall for debugging, mainly in Visual Studio Code IDE, but it can be done with any other IDE that supports the debugging protocols from NodeJS, Python, etc. This project may imply to modify MetaCall Core in order to enable debugging, or it may be done in a completely new project that adds debugging capabilities to MetaCall CLI or Core. This project is highly experimental at the moment of writing, but there has been already some investigation respect to it. The easy part is to launch the runtime with debugging protocol enabled, for example: `node --inspect script.js`. But attaching to running processes is more complex. For the latter one there is a [requirement in MetaCall Core](https://github.com/metacall/core/issues/231) which makes it more difficult to implement.
@@ -226,7 +280,13 @@ The final result of this project should be to be able to debug a polyglot applic
 
 **Skills**: VSCode (JavaScript)
 
-**Size**: Large Project
+**Expected size of the project**: 175 hour
+
+**Difficulty rating**: Easy
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 The objective of this project is complementary to the [previous one](https://github.com/metacall/gsoc-2022/blob/main/README.md#polyglot-debugger). It requires to implement a VSCode extension which allows to have an integrated environment for polyglot development.
@@ -242,7 +302,13 @@ TODO
 
 **Skills**: GitHub Actions, YAML, BASH, CMake
 
-**Size**: Medium Sized Project
+**Expected size of the project**: 175 hour
+
+**Difficulty rating**: Easy
+
+**Possible mentors**: 
+
+**Expected outcomes**: 
 
 **Description**:
 
