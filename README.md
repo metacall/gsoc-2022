@@ -236,7 +236,7 @@ Once a call has been done, another parts can be implemented, like `metacall_load
 
 **Expected size of the project**: Large (350 hours)
 
-**Difficulty rating**: Medium
+**Difficulty rating**: Hard
 
 **Description**:
 Nowadays WebAssembly is gaining a lot of traction, allowing more functionality each time and supporting as a compilation target in a wide variety of languages. One of the first attempts to be able to virtualize a Linux into the browser was JSLinux from Fabrice Bellard. This solution was implemented originally using `asm.js` and existing technology before the standardization of WebAssembly. The project has been refactored through the time but there are other alternatives nowadays which can be more powerful and production ready. A newer alternative to JSLinux is CheerpX, a modern compiler forked from LLVM for C/C++ to WebAssembly.
