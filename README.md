@@ -275,26 +275,6 @@ The final result of this project should be to be able to debug a polyglot applic
 
  - NodeJS Debugging: https://nodejs.org/en/docs/guides/debugging-getting-started/
  - Python Debugging in VSCode: https://code.visualstudio.com/docs/python/debugging
-
-### Polyglot IDE
-
-**Skills**: VSCode (JavaScript/TypeScript)
-
-**Expected size of the project**: Medium (175 hours)
-
-**Difficulty rating**: Medium
-
-**Possible mentors**:
-
-**Expected outcomes**: 
-
-**Description**:
-The objective of this project is complementary to the [previous one](https://github.com/metacall/gsoc-2022/blob/main/README.md#polyglot-debugger). It requires to implement a VSCode extension which allows to have an integrated environment for polyglot development.
-
-TODO
-
-**Resources**:
-
  - GraalVM Polyglot Live Extension: https://marketplace.visualstudio.com/items?itemName=hpi-swa.polyglot-live-programming
  - VSCode Managing Polyglot Environments: https://dev.to/gokayokyay/managing-vscode-profiles-for-the-polyglot-developers-5d1j
 
