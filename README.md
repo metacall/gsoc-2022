@@ -44,7 +44,7 @@ You can also propose your own.
 
 **Skills**: C/C++, Bash, Batch, Guix, DevOps
 
-**Expected size of the project**: 175 hour
+**Expected size of the project**: Medium (175 hours)
 
 **Difficulty rating**: Medium
 
@@ -74,7 +74,7 @@ Finally it would be interesting to add a README in [this repository](https://git
 
 **Skills**: Go, Docker, BuildKit, Sandboxing, Kubernetes
 
-**Expected size of the project**: 350 hour
+**Expected size of the project**: Large (350 hours)
 
 **Difficulty rating**: Medium
 
@@ -98,7 +98,7 @@ This project has to be efficient and sandboxed, focused on FaaS development and 
 
 **Skills**: TypeScript
 
-**Expected size of the project**: 175 hour
+**Expected size of the project**: Medium (175 hours)
 
 **Difficulty rating**: Easy
 
@@ -122,7 +122,7 @@ For better deployment, the Deploy CLI should be integrable with MetaCall CLI, pr
 
 **Skills**: TypeScript
 
-**Expected size of the project**: 350 hour
+**Expected size of the project**: Large (350 hours)
 
 **Difficulty rating**: Medium
 
@@ -148,7 +148,7 @@ For better deployment, the MetaCall FaaS should be integrable with MetaCall CLI,
 
 **Skills**: C/C++, Python or NodeJS
 
-**Expected size of the project**: 175 hour
+**Expected size of the project**: Large (350 hours)
 
 **Difficulty rating**: Medium
 
@@ -185,9 +185,9 @@ The student must send a proper design in order to be accepted before starting th
 
 **Skills**: Rust, TypeScript, React
 
-**Expected size of the project**: 175 hour
+**Expected size of the project**: Medium (175 hours)
 
-**Difficulty rating**: Hard
+**Difficulty rating**: Medium
 
 **Possible mentors**: 
 
@@ -208,9 +208,9 @@ The Proof of Concept can contain also benchmarks, in order to compare it to othe
 
 **Skills**: Rust, Rust Compiler API
 
-**Expected size of the project**: 350 hour
+**Expected size of the project**: Large (350 hours)
 
-**Difficulty rating**: Medium
+**Difficulty rating**: Hard
 
 **Possible mentors**: 
 
@@ -234,7 +234,7 @@ Once a call has been done, another parts can be implemented, like `metacall_load
 
 **Skills**: WebAssembly, CMake, C/C++
 
-**Expected size of the project**: 350 hour
+**Expected size of the project**: Large (350 hours)
 
 **Difficulty rating**: Medium
 
@@ -258,7 +258,7 @@ The objective of this idea is to create a Proof of Concept in order to run MetaC
 
 **Skills**: C/C++, Debuggers, VSCode (JavaScript)
 
-**Expected size of the project**: 350 hour
+**Expected size of the project**: Large (350 hours)
 
 **Difficulty rating**: Hard
 
@@ -280,9 +280,9 @@ The final result of this project should be to be able to debug a polyglot applic
 
 **Skills**: VSCode (JavaScript)
 
-**Expected size of the project**: 175 hour
+**Expected size of the project**: Medium (175 hours)
 
-**Difficulty rating**: Easy
+**Difficulty rating**: Medium
 
 **Possible mentors**: 
 
@@ -302,7 +302,7 @@ TODO
 
 **Skills**: GitHub Actions, YAML, BASH, CMake
 
-**Expected size of the project**: 175 hour
+**Expected size of the project**: Medium (175 hours)
 
 **Difficulty rating**: Easy
 
