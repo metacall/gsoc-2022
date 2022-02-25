@@ -64,7 +64,7 @@ Finally it would be interesting to add a README in [this repository](https://git
 
 **Expected outcomes**: To implement and complete CI/CD builds for Windows, Linux and MacOS in order to provide cross-platform binary distributions of MetaCall.
 
-**Possible mentors**: Gil Arasa Verge, Vicente Eduardo Ferrer Garcia
+**Possible mentors**: Harsh Bardhan Mishra, Gil Arasa Verge, Vicente Eduardo Ferrer Garcia
 
 **Resources**:
  - Guix Build System options: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
@@ -109,7 +109,7 @@ For better deployment, the Deploy CLI should be integrable with MetaCall CLI, pr
 
 **Expected outcomes**: A command line interface that is able to deploy projects and manage deployments in MetaCall FaaS.
 
-**Possible mentors**: Thomas Rory Gummerson
+**Possible mentors**: Thomas Rory Gummerson, Jose Antonio Dominguez, Alexandre Gimenez Fernandez, Vicente Eduardo Ferrer Garcia
 
 **Resources**:
  - MetaCall Deploy repository: https://github.com/metacall/deploy
@@ -135,7 +135,7 @@ For better deployment, the MetaCall FaaS should be integrable with MetaCall CLI,
 
 **Expected outcomes**: An embeddable library that can be used for locally testing MetaCall projects as if they were hosted on the FaaS.
 
-**Possible mentors**: Thomas Rory Gummerson
+**Possible mentors**: Thomas Rory Gummerson, Jose Antonio Dominguez, Alexandre Gimenez Fernandez, Vicente Eduardo Ferrer Garcia
 
 **Resources**:
  - MetaCall FaaS TypeScript reimplementation repository: https://github.com/metacall/faas
@@ -189,14 +189,14 @@ The student must send a proper design in order to be accepted before starting th
 
 **Difficulty rating**: Medium
 
-**Possible mentors**: 
-
-**Expected outcomes**: 
-
 **Description**:
 Recently MetaCall has provided support for [inlining other languages into Rust](https://github.com/metacall/core/blob/adcc50496d53797011b87f42131cb857d0009ffb/source/ports/rs_port/tests/inline_test.rs#L13) though its macro system. This allows adding languages like Python or TypeScript into Rust easily. The main idea of this project is to create a Proof of Concept of an Actix server that easily embeds Server Side Rendering with TypeScript. This should be like a small framework which uses MetaCall and allows writing endpoint handlers where you can embed TypeScript directly with simplicity. In order to achieve this, the Rust Port will need to be extended, adding extra functionality required.
 
 The Proof of Concept can contain also benchmarks, in order to compare it to other server side rendering solutions or in order to be the baseline for future optimizations in MetaCall TypeScript support. Adding documentation and examples is needed too, so it can be reused in the future by other users and the functionality and utility of the framework is shown.
+
+**Expected outcomes**: A small framework based on Actix implementing inline server side rendering with React (TypeScript).
+
+**Possible mentors**: Jose Antonio Dominguez, Alexandre Gimenez Fernandez, Vicente Eduardo Ferrer Garcia, Gil Arasa Verge
 
 **Resources**:
 
@@ -212,14 +212,14 @@ The Proof of Concept can contain also benchmarks, in order to compare it to othe
 
 **Difficulty rating**: Hard
 
-**Possible mentors**: 
-
-**Expected outcomes**: 
-
 **Description**:
 Recently MetaCall [has stared support for Rust](https://github.com/metacall/core/tree/develop/source/loaders/rs_loader), allowing to embed Rust code into other languages like NodeJS, Python, etc. The current state of the loader allows to load and compile Rust code, obtaining the list of functions and types. The work to be done is to implement FFI calls, some options have been investigated already, like [`abi_stable`](https://crates.io/crates/abi_stable) crate, although the API is quite complex, and it has limitations like async support (although [there are alternatives](https://crates.io/crates/async_ffi)). Another workaround in order to implement FFI is to use the Compiler API to automatically generate stubs on the fly for each function, as we use the same compiler version to build the code and to call it, may be there is no need to make the ABI stable.
 
 Once a call has been done, another parts can be implemented, like `metacall_load_from_memory` which is basically an eval, or `metacall_load_from_package` which should be able to load precompiled packages. We may rely on `rlib` format, specially the `dylib` format which is the dynamic library version of `rlib` with [all the metadata information](https://rustc-dev-guide.rust-lang.org/backend/libs-and-metadata.html) required for the introspection in the `.rustc` section.
+
+**Expected outcomes**: Complete Rust language support for MetaCall.
+
+**Possible mentors**: Vicente Eduardo Ferrer Garcia, Gil Arasa Verge, Fernando Vaño Garcia
 
 **Resources**:
 
@@ -306,15 +306,14 @@ TODO
 
 **Difficulty rating**: Easy
 
-**Possible mentors**: 
-
-**Expected outcomes**: 
-
 **Description**:
-
 Currently, the Continuous Integration and Continuous Deployment pipelines are hosted on GitLab and uses their in-built GitLab CI. We use particular scripts to manage our automated testing and deployment through GitLab CI. The objective of this project is to migrate our CI/CD pipelines and deployment to GitHub Actions and GitHub Container Registry. GitHub Actions is free for public projects and does not limit our CI/CD minutes per month, hence providing a credible way of testing and deploying. Through GitHub Container Registry, we would like to centralize all our Docker images under our GitHub organization, while escaping the rate limiting issues around Docker Hub.
 
 The project would involve writing workflows using GitHub Actions to automate this process and allow the project to be built on every push and pull request event. We would also like to implement remote caching for faster builds, CI/CD matrix for testing on various architectures, and improving the developer experience for contributors. Finally it would be interesting to document the whole CI/CD strategy and workflow, for rest of the community to adopt this work as a best practise.
+
+**Expected outcomes**: A standardization of all MetaCall pipelines implemented on different platforms than GitHub.
+
+**Possible mentors**: Harsh Bardhan Mishra, Gil Arasa Verge
 
 **Resources**:
 
