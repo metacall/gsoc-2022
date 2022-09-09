@@ -9,13 +9,13 @@ I will explain my work in this post.
 
 MetaCall is a polyglot runtime environment that lets developers call functions and methods between different programming languages. 
 For example, we can call a Python function from Node.js or we can create a Python object within Ruby. This is done by following the Meta Object Protocol which represents primitive types as an object.
-It super useful when you want to handle different tasks with different programming languages.
+It is super useful when you want to handle different tasks with different programming languages.
 
 ## Why we need a Rust Loader for Metacall?
 
 Rust is a very interesting and popular programming language and it has a huge ecosystem which grows fast. 
-You can find many useful tools and libraries written in Rust, and maybe you want to use them in other languages for your special usecase. 
-Furthor more, if we have rust loader, we can write Fucntions in Rust on the [FaaS platform](https://metacall.io/).
+You can find many useful tools and libraries written in Rust, and maybe you want to use them in other languages for your special use case. 
+Further more, if we have a rust loader, we can write functions in Rust on the [FaaS platform](https://metacall.io/).
 
 However, as you may know, rust is a compiled language, which means you need to compile the source code into a executable in order to run it, making it hard to follow the Meta Object Protocol.
 
@@ -24,7 +24,7 @@ However, as you may know, rust is a compiled language, which means you need to c
 Basically, with rust loader, we have three ways to load rust types into Metacall:
 
 1. Load from a rust file.
-2. Load from memory(string).
+2. Load from memory (string).
 3. Load from a pre-compiled rust project.
 
 Here's [the repository](https://github.com/metacall/python-rust-melody-example) that contains all the code listed below.
@@ -54,7 +54,7 @@ We support common primitive types like:
 3. Vec
 4. HashMap
 
-For more examples, check out [the repository](https://github.com/metacall/python-rust-melody-example);
+For more examples, check out [the repository](https://github.com/metacall/python-rust-melody-example).
 
 ### Load from memory 
 
@@ -66,7 +66,7 @@ with open("./basic.rs", "r") as f:
 metacall_load_from_memory("rs", content)
 ```
     
-### Load from pre-compiled project.
+### Load from pre-compiled project
 
 You may find that we cannot use other libraries from `crates.io` just as we do with cargo, this is because when loading a script, we are just using `rustc` to compile the code and it would be hard to manage the dependencies with `rustc` only. The good news is, if we load a pre-compiled package, we can let cargo handles these dependencies and as a result, we can use other crates.
 
@@ -80,7 +80,7 @@ metacall_load_from_package("rs", "./melody_wrapper/target/debug/libmelody.rlib")
 
 And now you can use all exported functions in Metacall!
 
-For a fully working example, check out the [the repository](https://github.com/metacall/python-rust-melody-example).
+For a fully working example, check out [the repository](https://github.com/metacall/python-rust-melody-example).
 
 ## How do we implement a rust loader for metacall?
 
@@ -124,7 +124,7 @@ When I try to support loading structs, I try to search for rust reflection, and 
 
 After loading these functions and structs, we can use them in other languages.
 
-## Future works.
+## Future works
 
 So far, we still have a lot of interesting things to do, first thing is that we can passing complex parameters like functions, and objects, which will be useful when dealing with callbacks.
 
@@ -133,6 +133,5 @@ Second thing is that we really want to support async rust, like awaiting a rust 
 
 ## Contribution logs
 
-Here's the link of [my contributions](https://github.com/metacall/core/pulls?q=is%3Apr+author%3A%40me+is%3Aclosed) if needed.
-    
-    
+Here's the link of [my contributions to the core](https://github.com/metacall/core/pulls?q=is%3Apr+author%3AMediosZ) if needed.
+I also prepared [the example I have been showcasing during this post](https://github.com/metacall/python-rust-melody-example).
