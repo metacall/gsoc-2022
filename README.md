@@ -1,5 +1,5 @@
 # Google Summer of Code 2022
-List of project ideas for students applying to the Google Summer of Code program in 2022 (GSoC 2022).
+List of project ideas for contributors applying to the Google Summer of Code program in 2022 (GSoC 2022).
 
 ## Timeline/milestones
 
@@ -12,7 +12,7 @@ Please always refer to the [official timeline](https://developers.google.com/ope
 
 #### 0. Get familiar with GSoC
 
-First of all, and if you have not done that yet, read [the student guide](https://google.github.io/gsocguides/student/) which will allow you to understand all this process and how the program works overall. Refer to its left side menu to quick access sections that may interest you the most, although we recommend you to read everything.  
+First of all, and if you have not done that yet, read [the contributor guide](https://google.github.io/gsocguides/student/) which will allow you to understand all this process and how the program works overall. Refer to its left side menu to quick access sections that may interest you the most, although we recommend you to read everything.  
   
 #### 1. Discuss the project idea with the mentor(s)
 
@@ -33,7 +33,7 @@ We recommend you to follow [Google's guide to Writing a Proposal](https://google
 
 You can send the proposal link to any readable format you wish: Google Docs, plain text, in markdown... and preferably hosted online, accessible with a common browser **without downloading anything**.
 
-You can also ask for a review anytime to the community or mentor candidates before the student application deadline. It's much easier if you get feedback early than to wait for the last moment.
+You can also ask for a review anytime to the community or mentor candidates before the contributor application deadline. It's much easier if you get feedback early than to wait for the last moment.
   
 
 ## Project Ideas
@@ -166,7 +166,7 @@ All the parsing of the CLI commands and the REPL commands can be mostly fully re
 
 For trying out how the CLI or REPL works right now, you can download it here: https://github.com/metacall/install
 
-The student must send a proper design in order to be accepted before starting the refactor, it can be discussed with the Staff on the [different chats we are available](https://github.com/metacall/gsoc-2022/blob/main/README.md#find-us).
+The contributor must send a proper design in order to be accepted before starting the refactor, it can be discussed with the Staff on the [different chats we are available](https://github.com/metacall/gsoc-2022/blob/main/README.md#find-us).
 
 **Expected outcomes**: A refactor of MetaCall CLI with a bootstrappable design with all the current functionality (and improvements) provided as means of CLI plugins.
 
