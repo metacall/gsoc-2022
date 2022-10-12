@@ -2,8 +2,9 @@
 Author: "Lahfa Samy"
 ---
 
+# Google Summer of Code 2022: Packaging & Testing Metacall for MacOSX, NixOS, Windows
 
-# Motivation for this project
+## Motivation for this project
 
 MetaCall is packaged for Linux and for Windows, it was not packaged for MacOS but some efforts were already being made so that it can be packaged for MacOS.
 
